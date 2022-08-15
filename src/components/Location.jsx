@@ -31,7 +31,8 @@ const Location = ({locationNumber}) => {
     
     
   return (
-    <div>
+    <div className='location'>
+      <div className="container">
         <h2>{locationData?.name}</h2> 
         <p className="subtitle">type: {locationData.type}</p>
         <p className="subtitle">dimention: {locationData.dimension}</p>
@@ -46,6 +47,8 @@ const Location = ({locationNumber}) => {
           {locationData?.residents?.map(resident => <ResidentInfo key={resident} residentURL={resident} />)}
           
         </section>
+
+      </div>
     </div>
   )
 }
