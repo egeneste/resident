@@ -24,17 +24,21 @@ const ResidentInfo = ({residentURL}) => {
         <img src={resident?.image} alt="resident image" className="card-image" />
         <div className="status">
             <div className="circle"></div>
-            <p>{resident.status}</p>
+            <span>{resident.status}</span>
         </div>
-        <h3>{resident?.name}</h3>
-        <p className="small">Species</p>
-        <p className="big">{resident.species}</p>
 
-        <p className="small">Origen</p>
-        <p className="big">{resident.origin?.name}</p>
-
-        <p className="small">Number of episodes where he/she appears</p>
-        <p className="big">{resident.episode?.length}</p>
+        <div className="card-data">
+          <h3 className='big break'>{resident?.name}</h3>
+          
+          <p className="small">Species</p>
+          <p className="big break">{resident.species}</p>
+          
+          <p className="small">Origen</p>
+          <p className="big break">{resident.origin?.name}</p>
+          
+          <p className="small">Number of episodes where he/she appears</p>
+          <p className="big">{resident.episode?.length}</p>
+        </div>
     </div>
   )
 }

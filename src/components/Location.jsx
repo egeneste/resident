@@ -31,13 +31,17 @@ const Location = ({locationNumber}) => {
     
     
   return (
-    <div className='location'>
-      <div className="container">
-        <h2>{locationData?.name}</h2> 
-        <p className="subtitle">type: {locationData.type}</p>
-        <p className="subtitle">dimention: {locationData.dimension}</p>
-        <p className="subtitle">population: {locationData.residents?.length}</p>
-    
+    <div className='container'>
+      <div className="location">
+        <header>
+          <h2 >{locationData?.name}</h2> 
+          <div className="header-data">
+            <p className="subtitle break">type: {locationData.type}</p>
+            <p className="subtitle break">dimention: {locationData.dimension}</p>
+            <p className="subtitle break">population: {locationData.residents?.length}</p>
+
+          </div>
+        </header>
         <form onSubmit={handle_search}>
           <input type="text" ref={location_number} name='location_num' placeholder='location number'/>
           <button>Search</button>
